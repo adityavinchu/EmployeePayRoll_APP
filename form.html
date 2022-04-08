@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <!-- Required meta tags --> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+      
+        <link  href="C:\Users\Aditya\source\EmployeePayRoll_APP\formCSS.css" rel="stylesheet">
+    </head>
+    <body>
+<header>
+    <div class="logo">
+        <img src="C:\Users\Aditya\source\EmployeePayRoll_APP\assets\logo.png" alt="">
+        <div>
+            <span class="emp-text">EMPLOYEE</span><br>
+            <span class="emp-text emp-payroll">PAYROLL</span>
+
+        </div>
+    </div>
+    
+</header>
+<hr>
+        <form>
+            <h3>Employee Payroll Form</h3>
+        
+        <div>
+            <label for="text">NAME:</label>
+            <input type="text" id="text" name="name" placeholder="Enter name">
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+
+        <div class="profile-radio-content">
+            <label for="text">PROFILE:</label>
+
+            <label>
+                <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png" required>
+                <img class="profile" id='image1' src="C:\Users\Aditya\source\EmployeePayRoll_APP\assets\profile-images\Ellipse -8.png">
+            </label>
+            <label>
+                <input type="radio" id="profile4" name="profile" value="./assets/profile-images/Ellipse -7.png" required>
+                <img class="profile" id='image1' src="C:\Users\Aditya\source\EmployeePayRoll_APP\assets\profile-images\Ellipse -7.png">
+            </label>
+            <label>
+                <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
+                <img class="profile" id='image1' src="C:\Users\Aditya\source\EmployeePayRoll_APP\assets\profile-images\Ellipse -3.png">
+            </label>
+            <label>
+                <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
+                <img class="profile" id='image1' src="C:\Users\Aditya\source\EmployeePayRoll_APP\assets\profile-images\Ellipse -1.png">
+            </label>
+    </div> 
+
+        
+        
+            <div class="row-content">
+                <label class="label text fields" for="gender">GENDER</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            
+        
+
+        <div>
+            <label for="dept">DEPARTMENT:</label>
+
+            <input type="checkbox" id="dept1" name="dept1" value="dept">
+            <label for="dept1">HR</label><br>
+            <input type="checkbox" id="dept2" name="dept2" value="dept">
+            <label for="dept2">Sales</label><br>
+            <input type="checkbox" id="dept3" name="dept3" value="dept">
+            <label for="dept3">Finance</label><br>
+            <input type="checkbox" id="dept4" name="dept4" value="dept">
+            <label for="dept4">Engineer</label><br>
+            <input type="checkbox" id="dept5" name="dept5" value="dept">
+            <label for="dept5">Other</label><br>
+        </div>
+        <div>
+            <label for="salary">SALARY:</label>
+            <input type="range" id="salary" name="salary" min="0" max="200000" step="1000">
+            <output class="salary-output" for="salary" ></output> 
+        </div>
+
+
+        <div class="nativeDateTimePicker">
+            <label for="Date"> START DATE:</label>
+            <input type="date" id="emp" name="emp">
+        </div>
+
+        <div class="row-content">
+            <label class="text label field" for="notes">Notes</label>
+            <textarea id="notes" class="input" name="notes" placeholder="" style="height:100px"></textarea>
+        </div>
+
+        <div class="buttonParent">
+            <a href="" class="resetButton button cancelButton">Cancel</a>
+            <div class ="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
+        </div>
+
+    </form>
+        <script>
+            const text=document.querySelector('#text');
+            const textError=document.querySelector('.text-error');
+            text.addEventListener('input',function()
+            {
+                let nameRegex= RegExp('^[A-Z]{1}[a-z]{2,}$');
+                if(nameRegex.test(text.value))
+                    textError.textContent="";
+                else textError.textContent="Name is Incorrect"; 
+            });
+
+
+            const salary=document.querySelector('#salary');
+            const output=document.querySelector('.salary-output');
+            output.textContent=salary.value;
+            salary.addEventListener('input',function()
+            {
+                output.textContent=salary.value;
+            });
+        
+            </script>
+    </body>
+</html>
