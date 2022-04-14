@@ -1,0 +1,25 @@
+{
+    "employee": 
+    [
+        {
+          "name": "Akshay",
+          "gender": "male",
+          "departMent": ["Finance"],
+          "salary": "35000",
+          "startDate": "18 Jan 2021",
+          "notes": "",
+          "id": 11,
+          "profileUrl": "../EmployeePayRoll_APP/assets/profile-images/Ellipse -1.png"
+        },
+        {
+          "name": "rohit",
+          "gender": "male",
+          "departMent": ["HR"],
+          "salary": "40000",
+          "startDate": "28 Jan 2020",
+          "notes": "",
+          "id": 15,
+          "profileUrl": "../EmployeePayRoll_APP/assets/profile-images/Ellipse -3.png"
+        }
+    ]
+}

@@ -215,13 +215,3 @@ color: red;
         align-items: flex-start;
     }
 }
-
-.emp-text-homepg {
-    font: normal normal bold 30px Montserrat;
-    
-    padding-top: 8px;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0px;
-    color: #82a70c;
-    text-transform: capitalize;
-}

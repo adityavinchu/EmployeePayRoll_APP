@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="formCSS.css">
-  <title>Employee payroll App</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="home.css">
+        <title>Employee payroll App</title>
     </head>
-<body>
-
-    <div>
-        <h2 class="emp-text-homepg">Welcome To Employee payroll App</h2><br>
-      </div>
-    <h3></h3>
-        <div class="button-content">
-        <a href="./form.html" class=" button ">Add New Data</a>
+    <body>
+        <header class="flex-row-center header">
+            <div class="logo">
+                <img src="assets/logo.png" alt="">
+                <div >
+                    <span class="emp-text">EMPLOYEE</span><br>
+                    <span class="emp-text emp-payroll">PAYROLL</span>
+                </div>
+            </div>
+        </header>
+        <div class="flex-column content">
+            <div class="emp-detail">
+                <div class="detail-text">
+                    Employee Details <div class="count">1</div>
+                </div>
+                <a href="form.html" class="add-button flex-row-center">Add User</a>    
+            </div>
+            <div class="table-main">
+                <table id="display" class="table">
+                </table>
+            </div>
         </div>
-</body>
-    </html>
+    </body>
+<script src="home.js"></script>
+</html>
